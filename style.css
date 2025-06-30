@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+/* ||CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ||UTILITY CLASSES*/
+.bold {
+  font-weight: 700;
+}
+
+/* ||VARIABLES */
+:root {
+  /* COLORS */
+  --backgournd-color: hsl(30, 54%, 90%);
+  --recipe-bg-color: white;
+  --hero-title-color: hsl(24, 5%, 18%);
+  --text-color: hsl(30, 10%, 34%);
+  --preparation-bg-color: hsl(330, 100%, 98%);
+  --preparation-title-color: hsl(332, 51%, 32%);
+  --h2-color: hsl(14, 45%, 36%);
+  /* PADDING */
+  --padding-tb: 0.6em;
+  --padding-side: 1rem;
+  --list-padding: 0.35em 15px 0.35em 15px;
+
+  /* FONTS */
+  --font-family-title: "Young Serif", serif;
+  --font-family-text: "Outfit", sans-serif;
+  --font-size: 0.8rem;
+}
+
+/* GENERAL STYLES */
+body {
+  background-color: var(--BGCOLOR);
+  min-height: 100vh;
+  background-color: var(--backgournd-color);
+  font-family: var(--font-family-text);
+  color: var(--text-color);
+}
+
+h2 {
+  color: var(--h2-color);
+  font-family: var(--font-family-title);
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: var(--padding-tb) 0;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.ingredients,
+.instructions,
+.nutrition {
+  margin: 0 1.5rem;
+}
+.recipe {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ||HERO */
+
+.hero h1 {
+  font-family: var(--font-family-title);
+  font-size: 2rem;
+  color: var(--hero-title-color);
+  padding: var(--padding-tb) 1.2rem;
+  font-weight: 400;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  padding: 0 1.2rem;
+}
+
+.preparation-time {
+  background-color: var(--preparation-bg-color);
+  width: auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.preparation-time h3 {
+  margin-bottom: 1rem;
+  color: var(--preparation-title-color);
+}
+.preparation-time ul {
+  margin-left: 20px;
+}
+
+.preparation-time li {
+  padding: var(--list-padding);
+}
+
+.preparation-time li::marker {
+  color: var(--preparation-title-color);
+}
+
+/* ||INGREDIENTS */
+.ingredients {
+  margin-bottom: 2rem;
+}
+.ingredients ul {
+  margin-left: 25px;
+}
+
+.ingredients li {
+  padding: var(--list-padding);
+}
+
+.ingredients li::marker {
+  color: var(--h2-color);
+}
+
+/* ||INSTRUCTION */
+.instructions {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.instructions ol {
+  margin-left: 25px;
+}
+
+.instructions li {
+  padding: var(--list-padding);
+}
+
+.instructions li::marker {
+  color: var(--h2-color);
+  font-weight: bold;
+}
+
+/* ||NUTRITION */
+.nutrition {
+  margin-top: 0.5rem;
+}
+
+.nutrition table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.nutrition th,
+td {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.345);
+  padding: 1rem;
+}
+
+.nutrition th {
+  font-weight: 400;
+}
+
+.nutrition td {
+  font-weight: 700;
+  color: var(--h2-color);
+}
+
+.nutrition tr:last-child :is(th, td) {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 567px) {
+  :root {
+    font-size: 1rem;
+  }
+  .recipe {
+    margin: 10vh auto;
+    border-radius: 20px;
+    padding: 1.8rem;
+  }
+  .hero img {
+    border-radius: 12px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .hero p {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .ingredients,
+  .nutrition,
+  .instructions {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .preparation-time {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
